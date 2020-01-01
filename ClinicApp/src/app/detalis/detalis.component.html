@@ -1,0 +1,28 @@
+<section class="container-fluid mt-5">
+<input name="input" id="file" type="file">
+</section>
+
+<section class="container">
+    <form #form = "ngForm" (ngSubmit) ="editPatient(form.value)" method="GET">
+            <div class="row mt-5 m-b">
+              <div class="col">
+                <input type='text' name="name" class="form-control" [(ngModel)]='data1.name' >
+              </div>
+              <div class="col">
+                    <input type='text' name="email" class="form-control" [(ngModel)]='data1.email'>
+              </div>
+            </div>
+            <div class="row mt-5 mb-5">
+              <div class="col">
+                    <input type='text' name="age" class="form-control" [(ngModel)] ='data1.age'>
+              </div>
+              <div class="col">
+                    <input type='text' name="doctor" class="form-control" [(ngModel)] ='data1.doctor'>
+              </div>
+            </div>
+
+     <textarea rows='5' cols='12' class="form-control mt-5" name="description" type='text' [(ngModel)] ='data1.description' ></textarea>
+            <button type="submit" class="mt-5">Submit</button>
+          </form>
+        </section>
+

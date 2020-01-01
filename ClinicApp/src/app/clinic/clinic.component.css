@@ -1,0 +1,93 @@
+img{
+    width: 100%;
+}
+
+.img-logo{
+    width:5%;
+   
+}
+
+/*start of section 2*/
+
+#section_2{
+    height: 500px;
+    background: url(../../assets/doctor.jpg);
+    background-size:cover;
+    position: relative;
+    margin-top: 0%; 
+    overflow: hidden;
+    
+    
+}
+
+#div-opacity , #div-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    
+    
+}
+
+.div-style{
+    color: #86b2be
+}
+#div-opacity {
+    background-color: black;
+    opacity: 0.5;
+}
+
+#div-content{
+    padding-left: 8%;
+}
+#div-content h2{
+padding-top:10%; 
+width: 100%;
+font-size: 300%;
+font-weight: bold;
+
+}
+
+#parHeader{
+width: 50%;
+}
+
+
+.ruler{
+    height: 5px;
+ 
+}
+
+.color-line{
+   background-color: #86b2be;
+}
+
+.second-color-line{
+    background-color: black
+}
+
+.services .card:hover img{
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+hr{
+    border-top: 3px double #86b2be;
+    border-bottom: 3px double black;
+}
+
+.div-footer{background-color: #86b2be;}
+
+.img-contact{
+ width: 20%;
+
+}
+
+.img-loc{
+    width: 30%;
+}
+
+.textColor{
+    color: #0087ff ;
+}

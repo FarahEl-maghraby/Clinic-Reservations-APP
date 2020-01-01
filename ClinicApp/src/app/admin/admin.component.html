@@ -1,0 +1,78 @@
+
+<section class="container-fluid">
+<div class="row">
+
+<section >
+<div class="nav-side-menu ">
+    <div class="brand">ADMIN DASHBOARD</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list ">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a rouuterLink='admin'>
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                  </a>
+                </li>
+
+               
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a rouuterLink='admin'><i class="fa fa-globe fa-lg"></i> Services </a>
+                </li>  
+            
+
+                 <li>
+                  <a rouuterLink='admin'>
+                  <i class="fa fa-user fa-lg"></i> Profile
+                  </a>
+                  </li>
+
+                 <li>
+                  <a rouuterLink='admin'>
+                  <i class="fa fa-users fa-lg"></i> Users
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
+</section>
+
+<section class=" container col-6  ">
+        <h2 class="mt-5">Patients Data</h2>
+  
+        <table class="table table-bordered overflow-hidden" >
+                <thead>
+                  <tr>
+                    <th scope="col" >RequestID</th>
+                    <th scope="col" >Name</th>
+                    <th scope="col" >E-mail</th>
+                    <th scope="col" >Age</th>
+                    <th scope="col" >Doctor</th>
+                    <th scope="col" >Accept</th>
+                    <th scope="col" >Decline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                        <tr *ngFor="let patient of data">
+                             <td>{{patient.requestID}}</td>
+                              <td>{{patient.name}}</td>
+                              <td>{{patient.email}}</td>
+                              <td>{{patient.age}}</td>
+                              <td>{{patient.doctor}}</td>
+                           <td class="mr-5">
+                               
+                                <button type="button" class="btn btn-success" (click)='editStatus(patient.requestID)'>Accept</button>
+                              </td>  
+                              <td>
+                                <button type="button" class="btn btn-danger " (click)='deletePatient(patient._id)' >Decline</button>
+                            
+                           </td> 
+                             
+                </tbody>
+
+              </table>
+            
+        </section>
+    </div>
+    </section>
